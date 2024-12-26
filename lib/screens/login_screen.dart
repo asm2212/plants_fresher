@@ -56,7 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 16, right: 16, bottom: 20),
+                  padding: const EdgeInsets.only(left: 16, right: 16, bottom: 10),
                   child: Text(
                     'Login to your account',
                     style: GoogleFonts.poppins(
@@ -67,7 +67,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 16, right: 16, bottom: 20),
+                  padding: const EdgeInsets.only(left: 16, right: 16, bottom: 10),
                   child: RoundTextfield(
                     controller: widget.nameController,
                     hintText: "Full Name",
@@ -153,8 +153,6 @@ class _LoginScreenState extends State<LoginScreen> {
                             color: Constants.primaryText,
                             fontWeight: FontWeight.w700,
                             decoration: TextDecoration.underline,
-
-
                           ),
                         ),
                       ),
@@ -185,7 +183,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
             ),
-            
           ],
         ),
       ),

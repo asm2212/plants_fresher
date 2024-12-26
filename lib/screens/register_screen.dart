@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:plants_fresher/common_widget/round_button.dart';
+import 'package:plants_fresher/common_widget/round_text_field.dart';
 import 'package:plants_fresher/screens/login_screen.dart';
 import 'package:plants_fresher/utils/constants.dart';
 
 class RegisterScreen extends StatefulWidget {
   final TextEditingController nameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  final TextEditingController confirmPasswordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
   final TextEditingController emailController = TextEditingController();
 
   RegisterScreen({super.key});
@@ -61,24 +64,113 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
               Center(
                 child: Text(
-                      'Register',
-                      style: GoogleFonts.poppins(
-                        fontSize: 34,
-                        color: Constants.black,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
+                  'Register',
+                  style: GoogleFonts.poppins(
+                    fontSize: 34,
+                    color: Constants.black,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
               ),
-                    Center(
-                      child: Text(
-                      'Create your new account',
-                      style: GoogleFonts.poppins(
-                        fontSize: 18,
-                        color: Constants.secondaryText,
-                        fontWeight: FontWeight.w500,
+              Center(
+                child: Text(
+                  'Create your new account',
+                  style: GoogleFonts.poppins(
+                    fontSize: 18,
+                    color: Constants.secondaryText,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+              SizedBox(height: media.height * 0.02),
+              Padding(
+                padding: const EdgeInsets.only(left: 16, right: 16, bottom: 10),
+                child: RoundTextfield(
+                    controller: widget.nameController,
+                    hintText: "Full Name",
+                    icon: 'assets/images/user.png'),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 16, right: 16, bottom: 10),
+                child: RoundTextfield(
+                    controller: widget.emailController,
+                    hintText: "Email",
+                    icon: 'assets/images/email.png'),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 16, right: 16, bottom: 10),
+                child: RoundTextfield(
+                    controller: widget.passwordController,
+                    hintText: "Password",
+                    icon: 'assets/images/lock.png'),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 16, right: 16, bottom: 10),
+                child: RoundTextfield(
+                    controller: widget.confirmPasswordController,
+                    hintText: "Confirm Password",
+                    icon: 'assets/images/lock.png'),
+              ),
+
+              Padding(
+                padding: EdgeInsets.only(
+                  left: media.width * 0.15,
+                  right: media.width * 0.15,
+                ),
+                child: Text(
+                  'By signing up, you agree to our\n   Terms & Conditions',
+                  style: GoogleFonts.poppins(
+                    fontSize: 15,
+                    color: Colors.grey,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+              Center(
+                child: Image.asset(
+                  'assets/images/plant_water.png',
+                  height: media.height * 0.1,
+                ),
+              ),
+                 Padding(
+                  padding: const EdgeInsets.only(left: 16, right: 16, bottom: 20,top: 50),
+                  child: RoundButton(onPressed: (){}, title: 'Sign Up',fontSize: 22,),
+                ),
+                  Padding(
+                  padding:  EdgeInsets.only(left: media.width * 0.01, right: 16, bottom: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Already have an account?',
+                        style: GoogleFonts.poppins(
+                          fontSize: 15,
+                          color: Colors.grey,
+                          fontWeight: FontWeight.w700,
+                        ),
                       ),
-                     ),
-                    ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>  LoginScreen(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          ' Login',
+                          style: GoogleFonts.poppins(
+                            fontSize: 15,
+                            color: Constants.primaryText,
+                            fontWeight: FontWeight.w700,
+                            decoration: TextDecoration.underline,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
             ],
           ),
         ),
