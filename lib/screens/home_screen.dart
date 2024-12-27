@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:plants_fresher/common_widget/round_text_field.dart';
+import 'package:plants_fresher/screens/order_screen.dart';
 import 'package:plants_fresher/utils/constants.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -127,13 +128,19 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Stack(
         children: [
           // Background Image
-          ClipRRect(
-            borderRadius: BorderRadius.circular(5),
-            child: Image.asset(
-              "assets/images/recommend1.png",
-              height: media.height * 0.22,
-              width: media.width * 0.43,
-              fit: BoxFit.cover,
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder:(context) => const OrderScreen()));
+            },
+            child: ClipRRect(
+            
+              borderRadius: BorderRadius.circular(5),
+              child: Image.asset(
+                "assets/images/recommend1.png",
+                height: media.height * 0.22,
+                width: media.width * 0.43,
+                fit: BoxFit.cover,
+              ),
             ),
           ),
           // Bottom Left: Title and Subtitle
@@ -213,13 +220,18 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Stack(
         children: [
           // Background Image
-          ClipRRect(
-            borderRadius: BorderRadius.circular(5),
-            child: Image.asset(
-              "assets/images/recommend3.png",
-              height: media.height * 0.22,
-              width: media.width * 0.43,
-              fit: BoxFit.cover,
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder:(context) => const OrderScreen()));
+            },
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(5),
+              child: Image.asset(
+                "assets/images/recommend3.png",
+                height: media.height * 0.22,
+                width: media.width * 0.43,
+                fit: BoxFit.cover,
+              ),
             ),
           ),
           // Bottom Left: Title and Subtitle
