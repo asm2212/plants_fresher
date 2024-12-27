@@ -26,6 +26,10 @@ Welcome to **Plants Fresher UI**, a modern and sleek user interface for a plant 
 - **Payment Screen**: Multiple payment methods for flexibility.
 - **Order Success Screen**: Celebrate successful purchases with a delightful animation.
 
+### screenshoot
+![Screenshot from 2024-12-28 02-28-24](https://github.com/user-attachments/assets/767d14be-6538-44c7-af0a-360022061a71)
+
+
 ---
 
 ## 🚀 Getting Started
