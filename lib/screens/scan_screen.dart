@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plants_fresher/screens/home_screen.dart';
 import 'package:plants_fresher/screens/order_screen.dart';
 import 'package:plants_fresher/utils/constants.dart';
 
@@ -14,7 +15,7 @@ class _ScanScreenState extends State<ScanScreen> {
   void initState() {
     super.initState();
     // Navigate to another screen after 1 second
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => const OrderScreen()),
@@ -49,7 +50,7 @@ class _ScanScreenState extends State<ScanScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const OrderScreen(),
+                          builder: (context) => const HomeScreen(),
                         ),
                       );
                     },

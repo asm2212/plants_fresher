@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:plants_fresher/screens/home_screen.dart';
 import 'package:plants_fresher/screens/my_cart_screen.dart';
+import 'package:plants_fresher/screens/scan_screen.dart';
 import 'package:plants_fresher/utils/constants.dart';
 
 class OrderScreen extends StatefulWidget {
@@ -37,7 +37,7 @@ class _OrderScreenState extends State<OrderScreen> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const HomeScreen()),
+                        MaterialPageRoute(builder: (context) => const ScanScreen()),
                       );
                     },
                     child: CircleAvatar(
