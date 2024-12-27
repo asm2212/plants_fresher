@@ -110,7 +110,7 @@ class _ScanScreenState extends State<ScanScreen> {
                     borderRadius: BorderRadius.circular(3),
                   ),
                 ),
-                SizedBox(height: media.width * 0.02),
+                SizedBox(height: media.width * 0.04),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -149,7 +149,7 @@ class _ScanScreenState extends State<ScanScreen> {
                     ),
                   ],
                 ),
-                SizedBox(height: media.height * 0.02),
+                SizedBox(height: media.height * 0.04),
                 Container(
                   height: media.height * 0.12,
                   decoration: BoxDecoration(
@@ -212,7 +212,7 @@ class _ScanScreenState extends State<ScanScreen> {
                     ],
                   ),
                 ),
-                  SizedBox(height: media.height * 0.02),
+                  SizedBox(height: media.height * 0.025),
                 Container(
                   height: media.height * 0.12,
                   decoration: BoxDecoration(

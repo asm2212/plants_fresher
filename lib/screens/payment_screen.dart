@@ -140,7 +140,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     color: Constants.buttonColor,
                   ),
                 ),
-                SizedBox(height: media.height * 0.015),
+                SizedBox(height: media.height * 0.02),
                 RoundTextfield(
                   hintText: "**** ****  ****  1234", 
                   icon: "assets/images/visa.png",
@@ -157,7 +157,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     ),
                   ),
                   ),
-                    SizedBox(height: media.height * 0.015),
+                    SizedBox(height: media.height * 0.02),
                 RoundTextfield(
                   hintText: "asmareadmasu0@gmail.com", 
                   icon: "assets/images/paypall.png",
@@ -174,7 +174,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     ),
                   ),
                   ),
-                    SizedBox(height: media.height * 0.015),
+                    SizedBox(height: media.height * 0.02),
                 RoundTextfield(
                   hintText: "**** ****  ****  1234", 
                   icon: "assets/images/master.png",
@@ -191,7 +191,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     ),
                   ),
                   ),
-                   SizedBox(height: media.height* 0.05,),
+                   SizedBox(height: media.height* 0.06,),
                   Row(
                     children: [
                       Text(
@@ -213,7 +213,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       ),
                     ],
                   ),
-                    SizedBox(height: media.height* 0.08,),
+                    SizedBox(height: media.height* 0.1,),
                     RoundButton(onPressed: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context) => const SuccessScreen()));
                     }, title: "Payment"),

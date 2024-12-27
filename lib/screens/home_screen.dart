@@ -54,6 +54,8 @@ class _HomeScreenState extends State<HomeScreen> {
                  ),
                 ],
               ),
+              SizedBox(height: media.height * 0.05),
+            
               Text(
                 "Let's find your plants!",
                 style: GoogleFonts.poppins(
@@ -336,6 +338,8 @@ Row(
      ),
   ]
 ),
+ SizedBox(height: media.height * 0.02),
+
  Text(
   "Recent Viewed",
   style: GoogleFonts.poppins(
@@ -373,7 +377,7 @@ Row(
     },
   ),
 ),
- SizedBox(height: media.height * 0.02),
+ SizedBox(height: media.height * 0.04),
  Row(
   children: [
    

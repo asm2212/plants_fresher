@@ -617,7 +617,7 @@ class _MyCartScreenState extends State<MyCartScreen> {
                     ),
                   ],
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 15),
                 Row(
                   children: [
                     Text(
@@ -639,7 +639,7 @@ class _MyCartScreenState extends State<MyCartScreen> {
                     ),
                   ],
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 15),
                  Divider(
                   color: Constants.secondaryText,
                   thickness: 2.0,
@@ -665,7 +665,7 @@ class _MyCartScreenState extends State<MyCartScreen> {
                     ),
                   ],
                 ),
-                 SizedBox(height: media.height*0.05),
+                 SizedBox(height: media.height*0.08),
                 RoundButton(
                   title: "Place your Order",
                   fontSize: 16,

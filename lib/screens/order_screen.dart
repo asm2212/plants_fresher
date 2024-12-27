@@ -86,7 +86,7 @@ class _OrderScreenState extends State<OrderScreen> {
                     borderRadius: BorderRadius.circular(3),
                   ),
                 ),
-                SizedBox(height: media.width * 0.02),
+                SizedBox(height: media.width * 0.03),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -205,7 +205,7 @@ class _OrderScreenState extends State<OrderScreen> {
                     ),
                   ],
                 ),
-                SizedBox(height: media.height * 0.02),
+                SizedBox(height: media.height * 0.05),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
