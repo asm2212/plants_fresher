@@ -9,4 +9,5 @@ class Constants {
   static Color get white => const Color(0xffffffff);
   static Color get black => const Color(0xff000000);
   static Color get buttonColor => const Color(0xff325A3E);
+  static Color get circleColor => const Color(0xff15BE62);
 }

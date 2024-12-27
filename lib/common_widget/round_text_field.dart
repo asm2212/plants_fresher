@@ -50,6 +50,7 @@ class RoundTextfield extends StatelessWidget {
                       ),
                       hintStyle:
                           TextStyle(color: Constants.secondaryText, fontSize: 15, fontWeight: FontWeight.w600),
+                      suffixIcon: rightIcon,
                     ),
                   ),
                 );

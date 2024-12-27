@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:plants_fresher/common_widget/round_button.dart';
 import 'package:plants_fresher/common_widget/round_text_field.dart';
+import 'package:plants_fresher/screens/home_screen.dart';
 import 'package:plants_fresher/screens/login_screen.dart';
 import 'package:plants_fresher/utils/constants.dart';
 
@@ -134,7 +135,20 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
                  Padding(
                   padding: const EdgeInsets.only(left: 16, right: 16, bottom: 20,top: 50),
-                  child: RoundButton(onPressed: (){}, title: 'Sign Up',fontSize: 22,),
+                  child: RoundButton(
+                    onPressed: (){
+                      // NAViagte to home page
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>  HomeScreen(
+                            
+                          ),
+                        ),
+                      );
+                    }, 
+                    title: 'Sign Up',
+                    fontSize: 22,),
                 ),
                   Padding(
                   padding:  EdgeInsets.only(left: media.width * 0.01, right: 16, bottom: 20),

@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:plants_fresher/common_widget/round_button.dart';
 import 'package:plants_fresher/common_widget/round_text_field.dart';
+import 'package:plants_fresher/screens/home_screen.dart';
 import 'package:plants_fresher/screens/register_screen.dart';
 import 'package:plants_fresher/screens/splash_screen.dart';
 import 'package:plants_fresher/utils/constants.dart';
 
 class LoginScreen extends StatefulWidget {
   final TextEditingController nameController = TextEditingController();
-   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
   LoginScreen({super.key});
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -24,7 +25,6 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Stack(
           children: [
             Column(
-
               children: [
                 Image.asset(
                   'assets/images/login_plants.png',
@@ -33,7 +33,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   fit: BoxFit.cover,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 10, left: 16, right: 16,bottom: 5),
+                  padding: const EdgeInsets.only(
+                      top: 10, left: 16, right: 16, bottom: 5),
                   child: Text.rich(
                     TextSpan(
                       text: 'Welcome ',
@@ -56,7 +57,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 16, right: 16, bottom: 10),
+                  padding:
+                      const EdgeInsets.only(left: 16, right: 16, bottom: 10),
                   child: Text(
                     'Login to your account',
                     style: GoogleFonts.poppins(
@@ -67,21 +69,24 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 16, right: 16, bottom: 10),
+                  padding:
+                      const EdgeInsets.only(left: 16, right: 16, bottom: 10),
                   child: RoundTextfield(
-                    controller: widget.nameController,
-                    hintText: "Full Name",
-                    icon: 'assets/images/user.png'),
+                      controller: widget.nameController,
+                      hintText: "Full Name",
+                      icon: 'assets/images/user.png'),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 16, right: 16, bottom: 10),
+                  padding:
+                      const EdgeInsets.only(left: 16, right: 16, bottom: 10),
                   child: RoundTextfield(
-                    controller: widget.passwordController,
-                    hintText: "Password",
-                    icon: 'assets/images/lock.png'),
+                      controller: widget.passwordController,
+                      hintText: "Password",
+                      icon: 'assets/images/lock.png'),
                 ),
-            Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -120,12 +125,24 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 16, right: 16, bottom: 20,top: 50),
-                  child: RoundButton(onPressed: (){}, title: 'Sign In',fontSize: 22,),
+                  padding: const EdgeInsets.only(
+                      left: 16, right: 16, bottom: 20, top: 50),
+                  child: RoundButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => HomeScreen(),
+                        ),
+                      );
+                    },
+                    title: 'Sign In',
+                    fontSize: 22,
+                  ),
                 ),
-
                 Padding(
-                  padding: const EdgeInsets.only(left: 16, right: 16, bottom: 20),
+                  padding:
+                      const EdgeInsets.only(left: 16, right: 16, bottom: 20),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -142,7 +159,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) =>  RegisterScreen(),
+                              builder: (context) => RegisterScreen(),
                             ),
                           );
                         },
