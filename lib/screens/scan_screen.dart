@@ -258,10 +258,10 @@ class _ScanScreenState extends State<ScanScreen> {
                               ),                   
                             ),
                           ),
-                      )
+                      ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
           ),
