@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plants_fresher/screens/home_screen.dart';
+import 'package:plants_fresher/screens/scan_screen.dart';
 import 'package:plants_fresher/utils/constants.dart';
 
 class OrderScreen extends StatefulWidget {
@@ -232,12 +233,17 @@ class _OrderScreenState extends State<OrderScreen> {
                             children: [
                               Icon(Icons.shopping_cart, size: 25, color: Constants.white),
                               SizedBox(width: 5),
-                              Text(
-                                "Buy Now",
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                  color: Constants.white,
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => ScanScreen()));
+                                },
+                                child: Text(
+                                  "Buy Now",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Constants.white,
+                                  ),
                                 ),
                               ),
                             ],

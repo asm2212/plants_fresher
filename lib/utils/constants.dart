@@ -19,4 +19,6 @@ class Constants {
 
   static List<Color> get primaryG => [primaryColor2,primaryColor1];
   static List<Color> get secondaryG => [secondaryColor1, secondaryColor2];
+  static Color get rectangleColor => const Color(0xffE8F5EE);
+  static Color get rectColor => const Color(0xff81D066);
 }
