@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:plants_fresher/common_widget/round_text_field.dart';
 import 'package:plants_fresher/screens/order_screen.dart';
+import 'package:plants_fresher/screens/scan_screen.dart';
 import 'package:plants_fresher/utils/constants.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -130,7 +131,7 @@ class _HomeScreenState extends State<HomeScreen> {
           // Background Image
           GestureDetector(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder:(context) => const OrderScreen()));
+              Navigator.push(context, MaterialPageRoute(builder:(context) => const ScanScreen()));
             },
             child: ClipRRect(
             
