@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:plants_fresher/common_widget/round_button.dart';
 import 'package:plants_fresher/screens/order_screen.dart';
+import 'package:plants_fresher/screens/payment_screen.dart';
 import 'package:plants_fresher/utils/constants.dart';
 
 class MyCartScreen extends StatefulWidget {
@@ -668,7 +669,14 @@ class _MyCartScreenState extends State<MyCartScreen> {
                 RoundButton(
                   title: "Place your Order",
                   fontSize: 16,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const PaymentScreen(),
+                      ),
+                    );
+                  },
                 ),
               ],
               ),
