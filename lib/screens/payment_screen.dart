@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:plants_fresher/common_widget/round_button.dart';
 import 'package:plants_fresher/common_widget/round_text_field.dart';
 import 'package:plants_fresher/screens/my_cart_screen.dart';
+import 'package:plants_fresher/screens/success_screen.dart';
 import 'package:plants_fresher/utils/constants.dart';
 
 class PaymentScreen extends StatefulWidget {
@@ -213,7 +214,9 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     ],
                   ),
                     SizedBox(height: media.height* 0.08,),
-                    RoundButton(onPressed: (){}, title: "Payment"),
+                    RoundButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const SuccessScreen()));
+                    }, title: "Payment"),
               ],
             ),
           ),
